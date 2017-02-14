@@ -14,7 +14,6 @@
 ################
 # Error check
 ################
-
 if [ ! $# == 2 ]; then
 	echo "Usage is simplify_name.sh <subject num> <path to NIFTI files>"
 	exit
@@ -35,7 +34,7 @@ if [ -e ${sub}-EMO_SpinEchoFieldMap_PA*nii.gz ]; then
 fi
 
 if [ -e ${sub}-fmri_emotion_SBRef*nii.gz ]; then
-	echo "Found `ls ${sub}-fmri_emotion_SBRef*nii.gz` will rename to ${sub}-emo_SBRef.nii.gz"
+	echo "Found `ls ${sub}-fmri_emotion_SBRef*nii.gz` will rename to ${sub}fmri_emo_SBRef.nii.gz"
 	mv ${sub}-fmri_emotion_SBRef*nii.gz ${sub}-emo_SBRef.nii.gz
 fi
 
@@ -45,7 +44,7 @@ if [ -e ${sub}-fmri_emotion*nii.gz ]; then
 fi
 
 if [ -e ${sub}-fmri_foodcues_SBRef*nii.gz ]; then
-	echo "Found `ls ${sub}-fmri_foodcues_SBRef*nii.gz` will rename to ${sub}-fc_SBRef.nii.gz"
+	echo "Found `ls ${sub}-fmri_foodcues_SBRef*nii.gz` will rename to ${sub}-fmri_fc_SBRef.nii.gz"
 	mv ${sub}-fmri_foodcues_SBRef*nii.gz ${sub}-fc_SBRef.nii.gz
 fi
 
@@ -96,7 +95,7 @@ if [ -e ${sub}-MB_Axial_DTI_PA_110_b2500*nii.gz ]; then
 fi
 
 if [ -e ${sub}-rfMRI_REST_AP_SBRef*nii.gz ]; then
-	echo "Found `ls ${sub}-rfMRI_REST_AP_SBRef*nii.gz` will rename to ${sub}-rs_ap_SBRef.nii.gz"
+	echo "Found `ls ${sub}-rfMRI_REST_AP_SBRef*nii.gz` will rename to ${sub}-fmri_rs_ap_SBRef.nii.gz"
 	mv ${sub}-rfMRI_REST_AP_SBRef*nii.gz ${sub}-rs_ap_SBRef.nii.gz 
 fi
 
@@ -107,7 +106,7 @@ fi
 
 
 if [ -e ${sub}-rfMRI_REST_PA_SBRef*nii.gz ]; then
-	echo "Found `ls ${sub}-rfMRI_REST_PA_SBRef*nii.gz` will rename to ${sub}-rs_pa_SBRef.nii.gz"
+	echo "Found `ls ${sub}-rfMRI_REST_PA_SBRef*nii.gz` will rename to ${sub}-fmri_rs_pa_SBRef.nii.gz"
 	mv ${sub}-rfMRI_REST_PA_SBRef*nii.gz ${sub}-rs_pa_SBRef.nii.gz
 fi
 
@@ -139,22 +138,22 @@ fi
 
 if [ -e ${sub}-T1w_MPR_scan1*nonorm*nii.gz ]; then
 	echo "Found `ls ${sub}-T1w_MPR_scan1*nonorm*nii.gz` will rename to ${sub}-t1w_scan1_nonorm.nii.gz"
-	mv ${sub}-T1w_MPR_scan1*nonorm*nii.gz ${sub}-t1w_scan1_nonorm.nii.gz
+	mv ${sub}-T1w_MPR_scan1*nonorm*nii.gz ${sub}-t1w_nonorm.nii.gz
 fi
 
 if [ -e ${sub}-T1w_MPR_scan1*nii.gz ]; then
 	echo "Found `ls ${sub}-T1w_MPR_scan1*nii.gz` will rename to ${sub}-t1w_scan1.nii.gz"
-	mv ${sub}-T1w_MPR_scan1*nii.gz ${sub}-t1w_scan1.nii.gz
+	mv ${sub}-T1w_MPR_scan1*nii.gz ${sub}-t1w.nii.gz
 fi
 
 if [ -e ${sub}-T2w_SPC_scan1*nonorm*nii.gz ]; then
 	echo "Found `ls ${sub}-T2w_SPC_scan1*nonorm*nii.gz` will rename to ${sub}-t2w_scan1_nonorm.nii.gz"
-	mv ${sub}-T2w_SPC_scan1*nonorm*nii.gz ${sub}-t2w_scan1_nonorm.nii.gz
+	mv ${sub}-T2w_SPC_scan1*nonorm*nii.gz ${sub}-t2w_nonorm.nii.gz
 fi
 
 if [ -e ${sub}-T2w_SPC_scan1*nii.gz ]; then
 	echo "Found `ls ${sub}-T2w_SPC_scan1*nii.gz` will rename to ${sub}-t2w_scan1.nii.gz"
-	mv ${sub}-T2w_SPC_scan1*nii.gz ${sub}-t2w_scan1.nii.gz
+	mv ${sub}-T2w_SPC_scan1*nii.gz ${sub}-t2w.nii.gz
 fi
 
 if [ -e ${sub}-T2w_SPC_scan2*nonorm*nii.gz ]; then

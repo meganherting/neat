@@ -28,6 +28,22 @@
 	FOOD_SpinEchoFieldMap_PA=3
 	##Localizer
 	##Localizer_aligned
+	fmri_emotion=350
+	fmri_emotion_SBRef=1
+	EMO_SpinEchoFieldMap_AP=3
+	EMO_SpinEchoFieldMap_PA=3
+	T1w_MPR=416
+	T2w_SPC=416
+###############################
+# Directory contents in Scan 2:
+	##BIAS_32CH
+	rfMRI_REST_AP=363
+	rfMRI_REST_AP_SBRef=1
+	rfMRI_REST_PA=363
+	rfMRI_REST_PA_SBRef=1
+	SpinEchoFieldMap_AP=3
+	SpinEchoFieldMap_PA=3
+	T1w_MPR=416
 	MB_Axial_DTI_AP_110_b2500=111
 	##MB_Axial_DTI_AP_110_b2500_ADC
 	##MB_Axial_DTI_AP_110_b2500_FA
@@ -38,21 +54,6 @@
 	##MB_Axial_DTI_PA_110_b2500_FA
 	##MB_Axial_DTI_PA_110_b2500_TENSOR
 	##MB_Axial_DTI_PA_110_b2500_TRACEW
-	T1w_MPR=416
-###############################
-# Directory contents in Scan 2:
-	##BIAS_32CH
-	fmri_emotion=340
-	fmri_emotion_SBRef=1
-	rfMRI_REST_AP=363
-	rfMRI_REST_AP_SBRef=3
-	rfMRI_REST_PA=363
-	rfMRI_REST_PA_SBRef=3
-	SpinEchoFieldMap_AP=3
-	SpinEchoFieldMap_PA=3
-	T1w_MPR=416
-	T2w_SPC=416
-###############################
 
 
 ##############
@@ -289,5 +290,5 @@ do
 done
 rm tmpscan2
 else
-	echo "echo "Ok, will not convert scan2 contents to NIFTI..."
+	echo "Ok, will not convert scan2 contents to NIFTI..."
 fi
